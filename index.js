@@ -1,6 +1,5 @@
 // console.log("Jaxongir", __dirname);
-const data = require("./data")
+// const data = require("./data")
+// console.log(data.favouriteCar);
+// data.sayHello()
 
-console.log(data.favouriteCar);
-
-data.sayHello()
