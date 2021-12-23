@@ -30,9 +30,21 @@ const server = http.createServer((req,res)=>{
           res.end(content)
        }
        )
+       }else if(req.url === '/api/cars'){
+           res.writeHead(200,{"Content-Type":"text/json"})
+        const cars = [
+            {
+                name:"Mers",
+                color:"red"
+            },
+            {
+                name:"BW",
+                color:"green"
+            }
+        ]
+           res.end(JSON.stringify(cars))
        }
-   }
-   else if(req.method === "POST"){
+   }else if(req.method === "POST"){
        const body = []
        res.writeHead(200,{"Content-type":"text/html; charset=utf-8"})
        req.on("data", data=>{
